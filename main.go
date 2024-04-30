@@ -294,9 +294,6 @@ func main() {
 		fuse.MaxReadahead(1024 * 1024),
 	}
 
-	if mountOpts.AllowRoot {
-		fmo = append(fmo, fuse.AllowRoot())
-	}
 	if mountOpts.AllowOther {
 		fmo = append(fmo, fuse.AllowOther())
 	}
